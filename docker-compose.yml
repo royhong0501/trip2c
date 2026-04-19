@@ -1,0 +1,11 @@
+services:
+  ascii:
+    build: .
+    image: trip2c-ascii
+    container_name: trip2c-ascii
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./samples:/app/samples:ro
+      - ./output:/app/output
+      - ./ascii_art.py:/app/ascii_art.py:ro
